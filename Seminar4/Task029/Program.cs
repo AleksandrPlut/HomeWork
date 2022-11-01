@@ -1,18 +1,34 @@
-﻿// Задача 29. Напишите программу, которая задает массив из 8 элементов и выводит их на экран.
+﻿// Задача 29. Задача 29: Напишите программу, которая задаёт массив произвольной длины, 
+// заполняет произвольными элементами и выводит их на экран.
+// Длину массива и элементы массива можно задать рандомно или попросить пользователя ввести в консоли.
 
-int  [] arr = new int [0];
-void newArray(int [] arr)
+Console.WriteLine("Введите количество элементов массива");
+int n = Convert.ToInt32(Console.ReadLine());
+
+void newArray(int[] array) 
 {
-    Console.Write("Введите длинну массива: ");
-    int n = Convert.ToInt32(Console.ReadLine());
-    int [] array = new int [n];
-}
-void newArrayP (int [] array)
-{
-    for (int i=0; i<array.Length; i++)
+    int length = array.Length;
+    int index = 0;
+    while (index < length)
     {
-        Console.Write("Введите элементы массива: ");
-        array[i] = int.Parse(Console.ReadLine());
+        array [index] = new Random(). Next(1,100);
+        index++;
     }
 }
-//PrintArray(arr);
+
+void PrintArray(int[] arr)
+{
+    int count = arr.Length;
+    int position = 0;
+    while (position < count)
+    {
+        Console.Write(arr[position] + " ");
+        position ++;
+    }
+}
+
+int [] collect = new int [n];
+newArray(collect);
+PrintArray(collect);
+
+
