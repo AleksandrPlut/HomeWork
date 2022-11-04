@@ -26,9 +26,3 @@ void PrintArray(int[] arr)
         position ++;
     }
 }
-
-int [] collect = new int [n];
-newArray(collect);
-PrintArray(collect);
-
-
