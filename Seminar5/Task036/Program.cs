@@ -13,7 +13,7 @@ void FillArray(int[] array, int from, int to)
 int SumElements(int[] a)
 {
     int Sum = 0;
-    for (int i = 0; i < a.Length; i = i + 2)
+    for (int i = 1; i < a.Length; i = i + 2)
     {
         Sum = Sum + a[i];
     }
@@ -32,7 +32,7 @@ void PrintArray(int[] array)
 }
 
 int[] arr = new Int32[10];
-FillArray(arr, 1, 10);
+FillArray(arr, -10, 100);
 PrintArray(arr);
 Console.WriteLine(SumElements(arr));
 
