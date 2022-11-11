@@ -7,10 +7,6 @@
 
 int[,] array = new Int32[3, 4];
 
-randomFilling(array, 0, 10);
-arrayOutput(array);
-arithmeticMeanColumn(array);
-
 void randomFilling(int[,] arr, int min, int max)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
@@ -50,6 +46,9 @@ void arrayOutput(int[,] arr)
     }
 }
 
+randomFilling(array, 0, 10);
+arrayOutput(array);
+arithmeticMeanColumn(array);
 
 
 /*
