@@ -4,8 +4,7 @@
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-
-[1,7] -> такого элемента в массиве нет
+// [1,7] -> такого элемента в массиве нет
 
 
 Console.WriteLine("Введите позиции элемента в двумерном массиве.");
@@ -13,28 +12,16 @@ Console.WriteLine("Введите позиции элемента в двуме�
 int rowI = Convert.ToInt32(Console.ReadLine());
 int columnJ = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = new Int32[5, 5];
+int[,] array = new int[6, 8];
 
-void randomFilling(int[,] arr, int min, int max)
+void randomFilling(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            arr[i, j] = new Random().Next(min, max);
+            arr[i, j] = new Random().Next(-10, 10);
         }
-    }
-}
-
-void foundElement(int[,] arr, int rowI, int columnJ)
-{
-    if (rowI > arr.GetLength(0) - 1 || columnJ > arr.GetLength(1) - 1)
-    {
-        Console.WriteLine("нет такого элемента");
-    }
-    else
-    {
-        Console.WriteLine($"По заданным позициям находится элемент {arr[rowI, columnJ]}");
     }
 }
 
@@ -51,6 +38,19 @@ void arrayOutput(int[,] arr)
     }
 }
 
-randomFilling(array, -10, 10);
+
+void foundElement(int[,] arr, int rowI, int columnJ)
+{
+    if (rowI > arr.GetLength(0) - 1 || columnJ > arr.GetLength(1) - 1)
+    {
+        Console.WriteLine("Такого элемента нет");
+    }
+    else
+    {
+        Console.WriteLine($"На заданной позиции находится элемент {arr[rowI, columnJ]}");
+    }
+}
+
+randomFilling(array);
 arrayOutput(array);
 foundElement(array, rowI, columnJ);
