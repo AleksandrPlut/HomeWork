@@ -32,7 +32,7 @@ void SortingArray(int[,] matr){
     for (int i = 0; i < matr.GetLength(0); i++){
         for (int j = 0; j < matr.GetLength(1); j++){
             for (int l = 0; l < matr.GetLength(1); l++){
-                if (matr[i,j] < matr[i,l]){
+                if (matr[i,j] > matr[i,l]){
                     temp = matr[i,l];
                     matr[i,l] = matr[i,j];
                     matr[i,j] = temp;
